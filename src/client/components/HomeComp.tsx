@@ -45,11 +45,16 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
                     </div>
                     <div className="col-md-8 text-justify font-weight-lighter">
                         <div className="px-3">My name is Pawel and I am a software developer with a background in healthcare administration. I am originally from Poland but immigrated to the US when I was 10 years old and lived in cities such as New York, West Palm Beach and Fort Lauderdale.</div>
-                        <div className="px-3">
+                        <div className="px-3 mt-2">
                             Even when working in the healthcare industry, I was always interested in how the software works and the code behind it. I decided that I wanted to shift my focus onto a new career path and dedicated my time to becoming a software developer.
                         </div>
                         <MyBioStyle>
                             <div style={{ display: `${show}` }} className="px-3">
+                                <Slide left>
+                                    <div className="row pl-3 mt-3">
+                                        <h4 className="font-weight-lighter">A little bit more about me...</h4>
+                                    </div>
+                                </Slide>
                                 <Slide bottom>
                                     <div className="mt-2">
                                         <p>I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve. Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.</p>
