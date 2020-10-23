@@ -8,7 +8,6 @@ const Scroll: React.FC<IScrollProps> = (props) => {
     <>
       <ScrollTheme>
         <a href="#home">
-
           <span className="blink display-1"><FaArrowCircleDown /></span>
         </a>
       </ScrollTheme>
