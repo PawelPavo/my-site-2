@@ -1,28 +1,76 @@
 import * as React from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import SwitchButton from "react-switch";
 import styled from 'styled-components';
 
-const Navigation: React.FC<INavigationProps> = (props) => {
+const Navigation: React.FC<INavigationProps> = () => {
 
-
-
+    // ===== controls for toggle switch ======
+    // const [checked, setChecked] = React.useState<boolean>(false)
+    // //Sets the theme of the site on toggle
+    // const handleTheme = async (checked: any) => {
+    //     setChecked(checked)
+    //     console.log(checked)
+    // }
     return (
         <>
             <Sticky>
                 <ul className="nav justify-content-around sticky-top shadow py-3">
                     <li className="nav-item">
-                        <NavLink exact to="/">
+                        <NavLink to="/">
                             <h3 className="font-weight-lighter text-decoration-none">Home</h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink exact to="/about">
-                            <h3 className="font-weight-lighter text-decoration-none">About</h3>
+                        <NavLink exact to="/projects">
+                            <h3 className="font-weight-lighter text-decoration-none">Projects</h3>
                         </NavLink>
                     </li>
                 </ul>
             </Sticky>
 
+            {/* ========== Toggkle switch  =========== */}
+
+            {/* <div className="col-md d-flex justify-content-center align-items-center mt-3">
+                <SwitchButton
+                    offColor="#98b1c4"
+                    onColor="#adb6c0"
+                    uncheckedIcon={
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                height: "100%",
+                                fontSize: 15,
+                                color: "#FFFFFF",
+                                paddingRight: 2,
+                            }}
+                        >
+                            <FaSun />
+                        </div>
+                    }
+                    checkedIcon={
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                height: "100%",
+                                fontSize: 15,
+                                color: "#FFFFFF",
+                                paddingRight: 2
+                            }}
+                        >
+                            <FaMoon />
+                        </div>
+                    }
+                    className="react-switch"
+                    id="icon-switch"
+                    onChange={handleTheme}
+                    checked={checked} />
+            </div> */}
         </>
     )
 }

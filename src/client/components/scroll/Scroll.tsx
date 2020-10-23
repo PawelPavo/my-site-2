@@ -7,7 +7,7 @@ const Scroll: React.FC<IScrollProps> = (props) => {
   return (
     <>
       <ScrollTheme>
-        <a href="#about">
+        <a href="#home">
 
           <span className="blink display-1"><FaArrowCircleDown /></span>
         </a>

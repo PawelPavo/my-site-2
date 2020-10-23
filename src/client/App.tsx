@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { GlobalStyles } from './utils/styles/global-style';
 import Navigation from './components/Navigation';
-import About from './views/About';
+import Projects from './views/Projects';
 import Home from './views/Home';
 
 const App: React.FC<IAppProps> = () => {
@@ -14,8 +14,8 @@ const App: React.FC<IAppProps> = () => {
 				<Route exact path="/">
 					<Home />
 				</Route>
-				<Route exact path="/about">
-					<About />
+				<Route exact path="/projects">
+					<Projects />
 				</Route>
 			</Switch>
 		</BrowserRouter>
