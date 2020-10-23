@@ -21,12 +21,12 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
     }
     return (
         <Zoom top>
-            <div className="row d-flex justify-content-center align-items-center mb-5">
-                <h1 className="font-weight-lighter border border-left-0 border-top-0 p-3">A little bit about me...</h1>
+            <div className="row d-flex justify-content-center align-items-center mx-5">
+                <h1 className="font-weight-lighter border-primary border border-left-0 border-top-0 pt-5 pl-5 pb-2 pr-2">A little bit about me...</h1>
             </div>
             <main className="d-flex justify-content-center">
-                <div className="row d-flex justify-content-center align-items-center ">
-                    <div className="col-md-3 ">
+                <div className="row d-flex justify-content-center align-items-center mt-3">
+                    <div className="col-md-3 mt-3">
                         <div className="font-weight-lighter text-center">
                             <img
                                 src={!eyes ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
@@ -43,7 +43,7 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
                                 </a>
                         </div>
                     </div>
-                    <div className="col-md-8 text-justify font-weight-lighter border border-right-0 border-bottom-0 pt-4">
+                    <div className="col-md-8 text-justify font-weight-lighter border border-primary border-right-0 border-bottom-0 pt-4">
                         <div className="px-3">My name is Pawel and I am a software developer with a background in healthcare administration. I am originally from Poland but immigrated to the US when I was 10 years old and lived in cities such as New York, West Palm Beach and Fort Lauderdale.</div>
                         <div className="px-3 mt-2">
                             Even when working in the healthcare industry, I was always interested in how the software works and the code behind it. I decided that I wanted to shift my focus onto a new career path and dedicated my time to becoming a software developer.
