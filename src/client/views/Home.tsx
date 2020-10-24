@@ -16,7 +16,7 @@ const Home: React.FC<IHomeProps> = (props) => {
                     <main className="d-flex justify-content-center h-50">
                         <div className="row d-flex justify-content-center">
                             <div className="mobile-text display-2 font-weight-lighter text-light">Pawel Jaskolski</div>
-                            <h3 className="text-light border border-bottom-0 border-right-0 pl-5 mr-5 pt-2">Software Developer</h3>
+                            <h3 className="text-light border border-bottom-0 border-right-0 px-5 mr-5 pt-2">Software Developer</h3>
                         </div>
                     </main>
                     <div className="col-md-12 d-flex justify-content-center align-items-center">

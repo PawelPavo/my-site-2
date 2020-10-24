@@ -7,4 +7,5 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
+
 `;

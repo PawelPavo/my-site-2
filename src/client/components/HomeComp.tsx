@@ -82,7 +82,7 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
                         </MyBioStyle>
                         <div className="row d-flex justify-content-center align-items-center">
                             <button
-                                className="btn btn-outline-primary px-5 my-5"
+                                className="btn btn-outline-primary px-3 my-5 rounded-0 border-bottom-0 border-right-0"
                                 type="button"
                                 onClick={handleShow}>
                                 Read {eyes ? 'Less' : 'More...I won\'t look.'}
