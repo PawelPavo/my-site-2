@@ -21,10 +21,10 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
     }
     return (
         <Zoom top>
-            <div className="row d-flex justify-content-center align-items-center mx-5">
-                <h1 className="font-weight-lighter border-primary border border-left-0 border-top-0 pt-5 pl-5 pb-2 pr-2">A little bit about me...</h1>
+            <div className="row d-flex justify-content-center align-items-center">
+                <h1 className="font-weight-lighter border-primary border border-left-0 border-top-0 pl-5 pt-5 pb-2 pr-2">A little bit about me...</h1>
             </div>
-            <main className="d-flex justify-content-center">
+            <main className="d-flex justify-content-center mt-5">
                 <div className="row d-flex justify-content-center align-items-center mt-3">
                     <div className="col-md-3 mt-3">
                         <div className="font-weight-lighter text-center">
@@ -82,7 +82,7 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
                         </MyBioStyle>
                         <div className="row d-flex justify-content-center align-items-center">
                             <button
-                                className="btn btn-outline-primary px-5 my-5 "
+                                className="btn btn-outline-primary px-5 my-5"
                                 type="button"
                                 onClick={handleShow}>
                                 Read {eyes ? 'Less' : 'More...I won\'t look.'}

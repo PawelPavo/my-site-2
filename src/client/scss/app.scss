@@ -2,6 +2,7 @@ $theme-colors: (
     'primary': #264b77,
 );
 
+
 .hide-mobile {
     @media (max-width: 576px) {
       display: none;
