@@ -2,6 +2,8 @@ $theme-colors: (
     'primary': #264b77,
 );
 
+$enable-gradients: true;
+
 .hide-mobile {
     @media (max-width: 576px) {
       display: none;
