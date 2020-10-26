@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { GrProjects, GrHome, GrContact } from 'react-icons/gr';
 import { NavLink } from 'react-router-dom';
 import SwitchButton from "react-switch";
 import styled from 'styled-components';
@@ -16,21 +17,26 @@ const Navigation: React.FC<INavigationProps> = () => {
     return (
         <>
             <div className="">
-                
+
                 <ul className="nav justify-content-around sticky-top shadow py-3">
                     <li className="nav-item">
                         <NavLink to="/">
-                            <h3 className="font-weight-lighter text-decoration-none">Home</h3>
+                            <h3 className="font-weight-lighter text-decoration-none"><GrHome /></h3>
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/">
+                            <h3 className="font-weight-lighter text-decoration-none"><GrContact /></h3>
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink exact to="/projects">
-                            <h3 className="font-weight-lighter text-decoration-none">Projects</h3>
+                            <h3 className="font-weight-lighter text-decoration-none"><GrProjects /></h3>
                         </NavLink>
                     </li>
                 </ul>
             </div>
-            
+
 
             {/* ========== Toggkle switch  =========== */}
 
