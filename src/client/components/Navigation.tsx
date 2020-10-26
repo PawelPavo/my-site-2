@@ -15,7 +15,8 @@ const Navigation: React.FC<INavigationProps> = () => {
     // }
     return (
         <>
-            <Sticky>
+            <div className="">
+                
                 <ul className="nav justify-content-around sticky-top shadow py-3">
                     <li className="nav-item">
                         <NavLink to="/">
@@ -28,7 +29,8 @@ const Navigation: React.FC<INavigationProps> = () => {
                         </NavLink>
                     </li>
                 </ul>
-            </Sticky>
+            </div>
+            
 
             {/* ========== Toggkle switch  =========== */}
 

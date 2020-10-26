@@ -1,8 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import HomeComp from '../components/HomeComp';
-import Navigation from '../components/Navigation';
 import Scroll from '../components/scroll/Scroll';
+import Typical from 'react-typical'
+
+
 const Zoom = require('react-reveal/Zoom')
 
 
@@ -16,7 +18,13 @@ const Home: React.FC<IHomeProps> = (props) => {
                     <main className="d-flex justify-content-center h-50">
                         <div className="row d-flex justify-content-center">
                             <div className="mobile-text display-2 font-weight-lighter text-light">Pawel Jaskolski</div>
-                            <h3 className="text-light border border-bottom-0 border-right-0 px-5 mr-5 pt-2">Software Developer</h3>
+                            <div className="text-light border border-bottom-0 border-right-0 px-5 mr-5 pt-2">
+                                <Typical
+                                    steps={['', 1000, 'Software Developer', 500]}
+                                    loop={1}
+                                    wrapper="h3"
+                                />
+                            </div>
                         </div>
                     </main>
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
@@ -24,10 +32,7 @@ const Home: React.FC<IHomeProps> = (props) => {
                     </div>
                 </div>
                 <div id="home">
-                    <div className="h-25">
-                        <Navigation />
-                    </div>
-                    <div className="row h-75">
+                    <div className="row h-100">
                         <div className="col-md-12">
                             <div><HomeComp /></div>
                         </div>

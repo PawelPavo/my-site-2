@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useLocation } from 'react-router';
 import styled from 'styled-components';
+import Navigation from './Navigation';
 
 const Zoom = require('react-reveal/Zoom')
 const Slide = require('react-reveal/Slide')
@@ -21,6 +21,9 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
     }
     return (
         <Zoom top>
+            <div className="sticky-top mb-5">
+                <Navigation />
+            </div>
             <div className="row d-flex justify-content-center align-items-center">
                 <h1 className="font-weight-lighter border-primary border border-left-0 border-top-0 pl-5 pt-5 pb-2 pr-2">A little bit about me...</h1>
             </div>
