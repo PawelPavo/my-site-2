@@ -8,24 +8,14 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         <Layout>
             <div
                 onClick={() => setShow2(!show2)}
-                className="col-md-8">
-                <div className="card mb-3 borderHover rounded-0">
-                    <div className="row no-gutters">
-                        <div className="col-md-4">
-                            <img src="..." className="card-img" alt="..." />
-                        </div>
-                        <div className="col-md-8">
-                            <div className="card-body">
-                                <h5
-                                    onClick={props.click}
-                                    className="card-title">{props.project.name}
-                                </h5>
-                                <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
+                className="col-md-12 border my-2 borderHover font-weight-lighter">
+                <div className="card-body">
+                    <h5
+                        onClick={props.click}
+                        className="card-title my-auto">{props.project.name}
+                    </h5>
+                    <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
             </div>
@@ -46,6 +36,12 @@ const Layout = styled.div`
 .showContent-active {
     height: 62px;
     opacity: 1;
+}
+
+.borderHover:hover {
+    border-color:rgb(192, 180, 180) !important;
+    box-shadow: 0 0 15px rgba(33,33,33,.2);
+    transition: 0.5s;
 }
 
 `

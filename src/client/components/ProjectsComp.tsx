@@ -44,10 +44,13 @@ const ProjectsComp: React.FC<IProjectsCompProps> = (props) => {
                             wrapper="p"
                         />
                     </div>
-                    <div className="row d-flex justify-content-center font-weight-lighter text-center">
-                        {MyProjects.map(project => (
-                            <ProjectCard key={project.name} project={project} click={handleClick} />
-                        ))}
+                    <div className="row">
+                        <div className="col-md-8">
+                            {MyProjects.map(project => (
+                                <ProjectCard key={project.name} project={project} click={handleClick} />
+                            ))}
+                        </div>
+                        <div className="col-md-4"></div>
                     </div>
                 </main>
             </Layout>
@@ -61,12 +64,6 @@ const Layout = styled.div`
       font-size: 50px;
     }
   }    
-
-.borderHover:hover {
-    border-color:rgb(192, 180, 180) !important;
-    box-shadow: 0 0 15px rgba(33,33,33,.2);
-    transition: 0.5s;
-}
 
 `
 
