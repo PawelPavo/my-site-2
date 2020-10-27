@@ -9,16 +9,25 @@ const Zoom = require('react-reveal/Zoom')
 
 const MyProjects = [
     {
-        name: "Code Basix",
-    },
-    {
         name: "Xolo Books",
+        description: "Xolo Books is an aspiring independent online bookstore based in the Washington D.C metropolitan area.",
+        projectUrl: "https://www.xolobooks.com/"
     },
     {
-        name: "Pawel Jaskolski",
+        name: "Light and Dark Theme",
+        description: "This project is develped with ReactJS and styled-components library to showcase the use of light and dark theme. It also incorporates MailGun and back-end database for projects tab.",
+        projectUrl: "https://damp-headland-11870.herokuapp.com/"
+    },
+    {
+        name: "One Page Website",
+        description: "This project was inspired by inifinte scroll and uses zero routers. The views are creaed by hrefs and id's. It is build with ReactJS, AWS S3 along with various styling libraries.",
+        projectUrl: "https://floating-retreat-73992.herokuapp.com/"
     },
     {
         name: "Fix-It-Fernando",
+        description: "Fix-It-Fernando is a website created using ReactJS, Bootstrap and AWS S3 services for a local constryction company.",
+        projectUrl: '',
+        status: " - UNDER CONSTRUCTION"
     },
 ];
 

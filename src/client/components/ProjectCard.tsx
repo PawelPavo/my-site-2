@@ -15,7 +15,8 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         className="card-title my-auto">{props.project.name}
                     </h5>
                     <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text mt-2">{props.project.description}</p>
+                        <a href={props.project.projectUrl} target="_blank" className="card-text">Visit {props.project.name} </a> <span> {props.project.status}</span>
                     </div>
                 </div>
             </div>
@@ -34,7 +35,7 @@ const Layout = styled.div`
 }
 
 .showContent-active {
-    height: 62px;
+    height: 100px;
     opacity: 1;
 }
 
