@@ -56,7 +56,7 @@ const Navigation: React.FC<INavigationProps> = () => {
                     </div>
                 </div>
                 <div className={`search-bar ${show2 ? 'search-bar search-bar-active' : ''}`}>
-                    <div className="row justify-content-center py-3 mt-3 border">
+                    <div className="row justify-content-center py-3 mt-3 border bg-SocialMediaBack">
                         <div className="icon">
                             <a target="_blank" href="https://github.com/PawelPavo?tab=repositories"><FaGithub /></a>
                         </div>
@@ -127,7 +127,7 @@ const Layout = styled.div`
 }
 
 .search-bar-active {
-    height: 40px;
+    height: 62px;
     opacity: 1;
 }
 

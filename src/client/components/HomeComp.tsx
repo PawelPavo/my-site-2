@@ -21,7 +21,7 @@ const HomeComp: React.FC<IHomeCompProps> = (props) => {
     }
     return (
         <Zoom top>
-            <div className="sticky-top mb-5">
+            <div className="mb-5 sticky-top">
                 <Navigation />
             </div>
             <div className="row d-flex justify-content-center align-items-center">
