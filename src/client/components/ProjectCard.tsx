@@ -35,7 +35,7 @@ const Layout = styled.div`
 }
 
 .showContent-active {
-    height: 100px;
+    height: 150px;
     opacity: 1;
 }
 
