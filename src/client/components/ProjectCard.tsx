@@ -8,11 +8,11 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         <Layout>
             <div
                 onClick={() => setShow2(!show2)}
-                className="col-md-12 border my-2 borderHover font-weight-lighter">
+                className="col-md-12 border my-2 borderHover font-weight-lighter bg-light">
                 <div className="card-body">
                     <h5
                         onClick={props.click}
-                        className="card-title my-auto">{props.project.name}
+                        className="card-title my-auto font-weight-lighter">{props.project.name}
                     </h5>
                     <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
                         <p className="card-text mt-2">{props.project.description}</p>
