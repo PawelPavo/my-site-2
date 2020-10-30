@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import HomeComp from '../components/HomeComp';
+import ProjectsComp from '../components/ProjectsComp';
+import CodeBasixComp from '../components/CodeBasixComp';
 
 const Slide = require('react-reveal/Slide');
 
@@ -10,19 +13,28 @@ const CodeBasix: React.FC<ICodeBasixProps> = (props) => {
         <>
             <Layout>
                 <div className="hero-image">
-                    <div className="container h-100 no-gutters">
+                    <div id="home" className="container h-100 no-gutters">
                         <div className="row">
-                            <Slide bottom>
-                                <div className="col-md-4 logo mobile-logo">
+                            <Slide top>
+                                <div className="col-md-4">
+                                    <a href="#home">
+                                        <img
+                                            src="https://news-api.s3.us-east-2.amazonaws.com/codeBasix-NoBG.png"
+                                            className="img-fluid mobile-logo"
+                                            alt="codeBasix logo" 
+                                            />
+                                    </a>
                                 </div>
                             </Slide>
-                            <div className="col-md-8">
-                                <div className="row justify-content-end my-5 py-5 link">
+                            <div className="col-md-8 mt-5">
+                                <div className="row justify-content-end mt-5 ">
                                     <Slide top>
-                                        <h4 className="font-weight-light">Welcome</h4>
-                                        <h4 className="font-weight-light mx-5">About</h4>
-                                        <h4 className="font-weight-light">Services</h4>
-                                        <h4 className="font-weight-light ml-5">Contact</h4>
+                                        <h4 className="font-weight-lighter mobile-nav-text">Welcome</h4>
+                                        <h4 className="font-weight-lighter mx-5 mobile-nav-text">About</h4>
+                                        <a href="#services">
+                                            <h4 className="font-weight-lighter mobile-nav-text">Services</h4>
+                                        </a>
+                                        <h4 className="font-weight-lighter ml-5 mobile-nav-text">Contact</h4>
                                     </Slide>
                                 </div>
                             </div>
@@ -30,30 +42,28 @@ const CodeBasix: React.FC<ICodeBasixProps> = (props) => {
                         <div className="row mt-5">
                             <div className="col-md-10 mt-5">
                                 <Slide left>
-                                    <div className="display-1 ml-5 font-weight-lighter">Move forward...</div>
+                                    <div className="display-1 ml-5 font-weight-lighter mobile-text mobile-margin ">Move forward...</div>
                                 </Slide>
                                 <Slide right>
-                                    <div className="display-1 ml-5 font-weight-lighter">Go back to basics!</div>
+                                    <div className="display-1 ml-5 font-weight-lighter mobile-text">Go back to basics!</div>
                                 </Slide>
                             </div>
                         </div>
                     </div>
                 </div>
             </Layout>
+            <div id="services">
+                <div className="container no-gutters h-100">
+                    <div className="col-md-12">
+                        <div><CodeBasixComp /></div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
 
 const Layout = styled.div`
-.logo {
-    text-align: center;
-    background-image: url('https://news-api.s3.us-east-2.amazonaws.com/codeBasix-NoBG.png');
-    background-size: contain;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    height: 300px;
-}
-
 .hero-image {
     background-image: url("https://news-api.s3.us-east-2.amazonaws.com/codeBasix-siteBG.jpg");
     height: 100%;
@@ -62,25 +72,35 @@ const Layout = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-
     .mobile-text {
         @media not all and (min-width: 576px) {
-          font-size: 50px;
-          text-align: left;
-
+          font-size: 45px;
         }
-      }    
-
-
+    } 
+    .mobile-nav-text {
+        @media not all and (min-width: 576px){
+            font-size: 15px;
+            margin-top: -100px;
+            margin-right: 15px;
+        }
+    }   
+    .mobile-margin {
+        @media not all and (min-width: 576px) {
+          margin-top: 50%
+        }
+    } 
 } 
 
 
 .mobile-logo {
     @media not all and (min-width: 768px) {
-      height:100px
+      height:100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-  }
-  .home {
+}
+.home {
     width: 250px;
     height: 300px;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
