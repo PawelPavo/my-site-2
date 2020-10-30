@@ -1,9 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import HomeComp from '../components/HomeComp';
-import ProjectsComp from '../components/ProjectsComp';
 import CodeBasixComp from '../components/CodeBasixComp';
+import CodeBasixAbout from '../components/CodeBasixAbout';
 
 const Slide = require('react-reveal/Slide');
 
@@ -20,9 +18,9 @@ const CodeBasix: React.FC<ICodeBasixProps> = (props) => {
                                     <a href="#home">
                                         <img
                                             src="https://news-api.s3.us-east-2.amazonaws.com/codeBasix-NoBG.png"
-                                            className="img-fluid mobile-logo"
-                                            alt="codeBasix logo" 
-                                            />
+                                            className="img-fluid mobile-logo mt-3"
+                                            alt="codeBasix logo"
+                                        />
                                     </a>
                                 </div>
                             </Slide>
@@ -30,7 +28,9 @@ const CodeBasix: React.FC<ICodeBasixProps> = (props) => {
                                 <div className="row justify-content-end mt-5 ">
                                     <Slide top>
                                         <h4 className="font-weight-lighter mobile-nav-text">Welcome</h4>
-                                        <h4 className="font-weight-lighter mx-5 mobile-nav-text">About</h4>
+                                        <a href="#about">
+                                            <h4 className="font-weight-lighter mx-5 mobile-nav-text">About</h4>
+                                        </a>
                                         <a href="#services">
                                             <h4 className="font-weight-lighter mobile-nav-text">Services</h4>
                                         </a>
@@ -53,11 +53,12 @@ const CodeBasix: React.FC<ICodeBasixProps> = (props) => {
                 </div>
             </Layout>
             <div id="services">
-                <div className="container no-gutters h-100">
-                    <div className="col-md-12">
-                        <div><CodeBasixComp /></div>
-                    </div>
+                <div className="col-md-12">
+                    <div><CodeBasixComp /></div>
                 </div>
+            </div>
+            <div id="about">
+                <div><CodeBasixAbout /></div>
             </div>
         </>
     )
@@ -74,9 +75,11 @@ const Layout = styled.div`
     width: 100%;
     .mobile-text {
         @media not all and (min-width: 576px) {
-          font-size: 45px;
+          font-size: 30px;
         }
-    } 
+    }
+
+
     .mobile-nav-text {
         @media not all and (min-width: 576px){
             font-size: 15px;
@@ -89,7 +92,9 @@ const Layout = styled.div`
           margin-top: 50%
         }
     } 
-} 
+}
+
+
 
 
 .mobile-logo {

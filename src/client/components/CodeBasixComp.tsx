@@ -1,8 +1,5 @@
 import * as React from 'react';
-import Navigation from '../components/Navigation';
-import Typical from 'react-typical'
 import styled from 'styled-components';
-import ProjectCard from './ProjectCard';
 import CodeBasixCard from './CodeBasixCard';
 
 const Slide = require('react-reveal/Zoom')
@@ -36,8 +33,8 @@ const CodeBasixComp: React.FC<ICodeBasixCompProps> = (props) => {
         <Layout>
             <main className="container h-100">
                 <div className="row">
-                    <div className="col-md-12 mx-auto text-center my-5">
-                        <Slide bottom>
+                    <div className="col-md-12 mt-5">
+                        <Slide left>
                             <div className="display-3 font-weight-lighter mobile-text">Web Services</div>
                         </Slide>
                     </div>

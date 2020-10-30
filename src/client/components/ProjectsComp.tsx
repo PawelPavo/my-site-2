@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import Typical from 'react-typical'
 import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
+import { Link } from 'react-router-dom';
 
 
 const Zoom = require('react-reveal/Zoom')
@@ -30,13 +31,6 @@ const MyProjects = [
         id: 4,
         name: "Fix-It-Fernando",
         description: "Fix-It-Fernando is a website created using ReactJS, Bootstrap and AWS S3 services for a local constryction company.",
-        projectUrl: '',
-        status: " - UNDER CONSTRUCTION"
-    },
-    {
-        id: 5,
-        name: "CodeBasix",
-        description: "Our Company",
         projectUrl: '',
         status: " - UNDER CONSTRUCTION"
     },
@@ -72,7 +66,11 @@ const ProjectsComp: React.FC<IProjectsCompProps> = (props) => {
                         </div>
                         <div className="col-md-4 logo"></div>
                     </div>
+                    <div className="row d-flex justify-content-center font-weight-lighter text-center">
+                        <Link to="/codebasix">CodeBasics</Link>
+                    </div>
                 </main>
+
             </Layout>
         </Zoom>
     )

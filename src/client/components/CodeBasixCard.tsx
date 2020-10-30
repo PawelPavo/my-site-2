@@ -1,5 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+
 
 const Slide = require('react-reveal/Zoom')
 
@@ -12,13 +14,18 @@ const CodeBasixCard: React.FC<CodeBasixCardProps> = (props) => {
             <Slide left>
                 <div
                     onClick={() => setShow2(!show2)}
-                    className="col-md-12 border my-2 borderHover font-weight-lighter bg-light">
+                    className="col-md-12 border my-2 borderHover font-weight-lighter bg-primary text-light">
 
                     <div className="card-body">
-                        <h5
-                            onClick={props.click}
-                            className="card-title my-auto font-weight-lighter ">{props.project.name}
-                        </h5>
+                        <div className="row justify-content-between">
+                            <h5
+                                onClick={props.click}
+                                className="card-title my-auto font-weight-lighter ">{props.project.name}
+                            </h5>
+                            <h5>
+                                {show2 ? <AiOutlineMinus/> : <AiOutlinePlus/>}
+                            </h5>
+                        </div>
                         <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
                             <p className="card-text mt-2">{props.project.description}</p>
                         </div>
@@ -40,7 +47,7 @@ const Layout = styled.div`
 }
 
 .showContent-active {
-    height: 150px;
+    height: 200px;
     opacity: 1;
 }
 
