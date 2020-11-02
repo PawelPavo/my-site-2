@@ -5,19 +5,22 @@ import Scroll from '../components/scroll/Scroll';
 import Typical from 'react-typical'
 
 
-const Zoom = require('react-reveal/Zoom')
+const Slide = require('react-reveal/Slide')
+const Fade = require('react-reveal/Fade')
 
 
 const Home: React.FC<IHomeProps> = (props) => {
     return (
-        <Zoom top>
+        <Fade top>
             <Layout>
                 <div className="hero-image">
                     <div className="row text-center h-25">
                     </div>
                     <main className="d-flex justify-content-center h-50">
                         <div className="row d-flex justify-content-center">
-                            <div className="mobile-text display-2 font-weight-lighter text-light">Pawel Jaskolski</div>
+                            <Slide left>
+                                <div className="mobile-text display-2 font-weight-lighter text-light">Pawel Jaskolski</div>
+                            </Slide>
                             <div className="text-light border border-bottom-0 border-right-0 px-5 mr-5 pt-2">
                                 <Typical
                                     steps={['', 1000, 'Software Developer', 500]}
@@ -39,7 +42,7 @@ const Home: React.FC<IHomeProps> = (props) => {
                     </div>
                 </div>
             </Layout>
-        </Zoom>
+        </Fade>
     )
 }
 
