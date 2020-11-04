@@ -66,9 +66,6 @@ const ProjectsComp: React.FC<IProjectsCompProps> = (props) => {
                         </div>
                         <div className="col-md-4 logo"></div>
                     </div>
-                    <div className="row d-flex justify-content-center font-weight-lighter text-center">
-                        <Link to="/codebasix">CodeBasics</Link>
-                    </div>
                 </main>
 
             </Layout>
@@ -100,15 +97,6 @@ const Layout = styled.div`
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-.logo {
-    text-align: center;
-    background-image: url('https://news-api.s3.us-east-2.amazonaws.com/codeBasix-NoBG.png');
-    background-size: contain;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    height: 500px;
 }
 
 `

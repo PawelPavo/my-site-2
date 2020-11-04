@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { GlobalStyles } from './utils/styles/global-style';
-import Navigation from './components/Navigation';
 import Projects from './views/Projects';
 import Home from './views/Home';
-import CodeBasix from './views/CodeBasix';
 
 const App: React.FC<IAppProps> = () => {
 	return (
@@ -17,9 +15,6 @@ const App: React.FC<IAppProps> = () => {
 				</Route>
 				<Route exact path="/projects">
 					<Projects />
-				</Route>
-				<Route exact path="/codebasix">
-					<CodeBasix />
 				</Route>
 			</Switch>
 		</BrowserRouter>

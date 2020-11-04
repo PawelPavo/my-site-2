@@ -5,7 +5,7 @@ import WakeUpServerJob from './utils/cron_jobs/wakeUpServerJob'
 
 const app = express();
 
-WakeUpServerJob.start();
+// WakeUpServerJob.start();
 app.use(express.static('public'));
 app.use(apiRouter);
 app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')))
