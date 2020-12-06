@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
 import { GrProjects, GrHome, GrContact } from 'react-icons/gr';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
-import SwitchButton from "react-switch";
 import styled from 'styled-components';
 
 const Slide = require('react-reveal/Slide')
@@ -34,23 +32,23 @@ const Navigation: React.FC<INavigationProps> = () => {
     return (
         <>
             <Layout>
-                <div className="sticky-top">
+                <div className="sticky-top bg-light">
                     <div className="row justify-content-around shadow pt-2">
                         <div className="py-3">
                             <NavLink to="/">
-                                <h3 className="font-weight-lighter text-decoration-none"><GrHome /></h3>
+                                <h3 className="font-weight-lighter nav-icon"><GrHome /></h3>
                             </NavLink>
                         </div>
                         <div className="py-3">
                             <div
                                 // onClick={handleShow}
                                 onClick={() => setShow2(!show2)} >
-                                <h3 ><GrContact /></h3>
+                                <h3 className="nav-icon"><GrContact /></h3>
                             </div>
                         </div>
                         <div className="py-3">
-                            <NavLink exact to="/projects">
-                                <h3 className="font-weight-lighter text-decoration-none"><GrProjects /></h3>
+                            <NavLink exact to="/projects" >
+                                <h3 className="font-weight-lighter nav-icon"><GrProjects /></h3>
                             </NavLink>
                         </div>
                     </div>
@@ -58,13 +56,13 @@ const Navigation: React.FC<INavigationProps> = () => {
                 <div className={`search-bar ${show2 ? 'search-bar search-bar-active' : ''}`}>
                     <div className="row justify-content-center py-3 mt-3 border bg-SocialMediaBack">
                         <div className="icon">
-                            <a target="_blank" href="https://github.com/PawelPavo?tab=repositories"><FaGithub /></a>
+                            <a className="icon" target="_blank" href="https://github.com/PawelPavo?tab=repositories"><FaGithub /></a>
                         </div>
                         <div className="icon">
-                            <a target="_blank" href="mailto:pjpavo@gmail.com"><FiMail /></a>
+                            <a className="icon" target="_blank" href="mailto:pjpavo@gmail.com"><FiMail /></a>
                         </div>
                         <div className="icon">
-                            <a target="_blank" href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/"><FaLinkedin /></a>
+                            <a className="icon" target="_blank" href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/"><FaLinkedin /></a>
                         </div>
                     </div>
                 </div>
@@ -135,9 +133,19 @@ const Layout = styled.div`
     font-size: 25px;
     margin-left: 25px;
     margin-right: 25px;
-
 }
 
+.icon:hover {
+    color: #c77306;
+}
+
+.nav-icon {
+    cursor: pointer;
+}
+
+.nav-icon:hover {
+    border-top-style: dotted;
+    
 `
 
 export interface INavigationProps { }
